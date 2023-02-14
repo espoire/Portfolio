@@ -1,0 +1,33 @@
+$outer-background-color: #ffa;
+$background-color: #fff;
+
+$card-border-size: 10px;
+$card-box-shadow-color: #444;
+
+body {
+  margin: 0;
+  background: $outer-background-color;
+}
+
+img { vertical-align:middle; }
+
+.card {
+  margin: 2em;
+  padding: 1em;
+  
+  text-align: center;
+  background: $background-color;
+
+  border: $card-border-size solid;
+  border-radius: $card-border-size;
+  border-color: $background-color;
+
+  box-shadow: 0 0 0 1pt $card-box-shadow-color;
+
+  :first-child { margin-top: 0; }
+  :last-child { margin-bottom: 0; }
+}
+
+.circle {
+  border-radius: var(--primer-borderRadius-full, 50%);
+}

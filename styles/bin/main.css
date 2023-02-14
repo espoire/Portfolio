@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background: #ffa;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.card {
+  margin: 2em;
+  padding: 1em;
+  text-align: center;
+  background: #fff;
+  border: 10px solid;
+  border-radius: 10px;
+  border-color: #fff;
+  box-shadow: 0 0 0 1pt #444;
+}
+.card :first-child {
+  margin-top: 0;
+}
+.card :last-child {
+  margin-bottom: 0;
+}
+
+.circle {
+  border-radius: var(--primer-borderRadius-full, 50%);
+}
+
+/*# sourceMappingURL=main.css.map */

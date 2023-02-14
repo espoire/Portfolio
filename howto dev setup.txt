@@ -1,0 +1,32 @@
+1. Install npm (Node.js Package Manager)
+    Download and run the installer from https://nodejs.org/en/download/
+
+2. Install http-server
+    Run npm install --global http-server
+
+3. Run http-server
+    Use the included start-server.bat file, or run
+    http-server webpageDirectory -p portNumber
+    For example: http-server . -p 8000
+    
+4. View the page
+    Visit localhost:8000 in a browser.
+
+5. (optional) Configure optional components.
+
+6. Configure eslint.
+    Run: npm init
+    Install the ESLint VS Code extension, or similar for your chosen editor.
+        https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+    Intialize eslint in the project directory by running:
+        If you have a global ESLint installation:
+            eslint --init
+        Otherwise:
+            npm install eslint
+    Configure the generated .eslintrc* file
+
+7. Configure sass.
+    Install Sass. https://sass-lang.com/install
+    Create the ~/styles/src and ~/styles/bin folders.
+    Create ~/styles/src/main.scss if desired.
+    Run the included watch-sass.bat file before making edits.
