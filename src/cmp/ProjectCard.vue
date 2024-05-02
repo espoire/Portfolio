@@ -1,7 +1,7 @@
 <script setup>
 import { toTitleCase } from '@/script/string.js'
 import { computed, ref } from 'vue'
-const props = defineProps(['name', 'route', 'tags', 'href', 'site', 'img'])
+const props = defineProps(['name', 'route', 'tags', 'href', 'site', 'img', 'size'])
 const showScreenshot = ref(true)
 const action = computed(() => {
   return props.tags?.includes('Code-Only')
@@ -15,7 +15,7 @@ const href = computed(
     props.href ??
     (props.tags?.includes('Code-Only')
       ? `https://github.com/espoire/${props.route}`
-      : `https://espoire.github.io/${props.route}/`)
+      : `https://espoire.github.io/${props.route}`)
 )
 const site = computed(
   () => props.site ?? (props.tags?.includes('Code-Only') ? 'GitHub' : 'GitHub Pages')
@@ -26,7 +26,7 @@ function hide() {
 </script>
 
 <template>
-  <div class="card" :style="showScreenshot ? 'min-height: calc(min(30dvw, 40dvh) + 5rem);' : ''">
+  <div class="card" :style="showScreenshot ? `min-height: calc(min(30dvw, 40dvh${props.size ? `, ${props.size}px` : ''}) + 5rem);` : ''">
     <div class="header">
       <div>
         <h2 class="name">{{ props.name }}</h2>
@@ -42,6 +42,7 @@ function hide() {
     <img
       v-if="showScreenshot"
       class="screenshot"
+      :style="props.size ? `max-width: min(25dvw, ${props.size}px); max-height: min(30dvw, 40dvh, ${props.size}px));` : ''"
       :src="props.img ?? `./${props.route}.gif`"
       @error="hide"
       :title="`Screenshot from ${props.name}`"

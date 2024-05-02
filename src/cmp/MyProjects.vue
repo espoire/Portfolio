@@ -115,7 +115,7 @@ import ProjectCard from './ProjectCard.vue'
     </ul>
   </ProjectCard>
 
-  <ProjectCard name="SVG Magic Circle Generator" route="monster-smash/circle" :tags="['animation', 'published', '2023']" img="magic-circle.svg">
+  <ProjectCard name="SVG Magic Circle Generator" route="monster-smash/circle" :tags="['animation', 'published', '2023']" img="magic-circle.svg" size="150">
     <div style="min-height: calc(150px + 0.4rem)">
       <p>
         <b>SVG Magic Circle Generator</b> is an animated programmatic art piece, made in vanilla
