@@ -232,7 +232,7 @@ import ProjectCard from './ProjectCard.vue'
 
   <ProjectCard name="DDOP" route="DDOP" :tags="['tool', 'Code-Only', '2020']">
     <p>
-      <b>DDO</b>, a portmanteau of 'DDO' (Dungeons and Dragons Online) and 'OP' (over-powered) is a
+      <b>DDOP</b>, a portmanteau of 'DDO' (Dungeons and Dragons Online) and 'OP' (over-powered) is a
       gear-recommendation tool for the online MMORPG, Dungeons and Dragons Online. DDOP periodically
       gathers game data by parsing the player-edited DDO Wiki, and feeds that to a
       reverse-engineered combat simulator, to produce high-quality recommendations for Monk
