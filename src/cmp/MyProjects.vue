@@ -236,7 +236,9 @@ import ProjectCard from './ProjectCard.vue'
       gear-recommendation tool for the online MMORPG, Dungeons and Dragons Online. DDOP periodically
       gathers game data by parsing the player-edited DDO Wiki, and feeds that to a
       reverse-engineered combat simulator, to produce high-quality recommendations for Monk
-      character's equipment loadouts.
+      character's equipment loadouts. After code optimization and adopting the Simulated Annealing
+      algorithm, DDOP was able to discover equipment sets vastly more powerful than those found by
+      contemporary world-class players.
     </p>
 
     <p>DDOP is a multithreaded Java application, producing file and console output.</p>
