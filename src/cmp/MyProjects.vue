@@ -36,6 +36,35 @@ import ProjectCard from './ProjectCard.vue';
     </p>
   </ProjectCard>
 
+  <ProjectCard name="Harvest Havoc" route="harvest-havoc" :tags="['ludum dare 55', 'game jam', 'published', '2024']"
+      site="Itch.io" href="https://mortusnegati.itch.io/true-heir-warfare-harvesting-havoc"
+    >
+    <p>
+      <b>Harvest Havoc</b> is a game jam submission made in the Godot game engine, completed for the Ludum Dare
+      55 game jam competition in April 2024. The game jam's theme was "summoning", and the game involves drawing
+      runes (a la a phone unlock patterns) on a pentagram to summon animate vegetables to battle.
+    </p>
+
+    <h3>Gameplay</h3>
+    <p>
+      After a brief story intro, the player enters into battle over an empty farmyard with their sibling by
+      summoning vegetables. -- the only problem? The game didn't tell them how to summon anything yet! The
+      player can see the shapes the non-player opponent is drawing, or notice an environmental clue to discover
+      the runes needed to do battle. If too many of either participant's summoned forces reach the opposing
+      barn, the round ends. After up to 5 rounds, one of the siblings is declared the victor, and the credits
+      roll.
+    </p>
+
+    <h3>Contributors</h3>
+    <ul>
+      <li>Vivian Lampman - Programming: Summoning Controls, Base Opponent Script, Bird Movement, Intro & Outro Sequences</li>
+      <li>Gregary Pergrossi - Programming: Camera Controls, Base Mobs Movement</li>
+      <li>JaggedRidge - Programming: Specific Mobs Movement, Opponent Script Specifics, Rune Drawing, Round Advancement</li>
+      <li>Leo115 - Programming: 3D Modeling, Project Management</li>
+      <li>Shawna Burns - 2D Art, Sound Effects, Story Design</li>
+    </ul>
+  </ProjectCard>
+
   <ProjectCard name="Monster Smash" route="monster-smash" :tags="['game', 'published', '2023']">
     <p>
       <b>Monster Smash</b> is a roguelike deck-building monster-battler game, built with vanilla JavaScript and HTML5.
@@ -65,10 +94,11 @@ import ProjectCard from './ProjectCard.vue';
       must face a powerful dragon as a final test.
     </p>
 
-    <h3>Other Contributors</h3>
-    <p>
-      Shawna Burns - 2D Images, Sound Effects
-    </p>
+    <h3>Contributors</h3>
+    <ul>
+      <li>Vivian Lampman - Programming, Animations, Card Design</li>
+      <li>Shawna Burns - 2D Art, Sound Effects, Character Design</li>
+    </ul>
   </ProjectCard>
 
   <ProjectCard name="Starry Sky" route="starry-sky" :tags="['animation', 'published', '2021']">

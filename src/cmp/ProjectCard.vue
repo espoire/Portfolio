@@ -1,7 +1,7 @@
 <script setup>
 import { toTitleCase } from '@/script/string.js'
 import { computed, ref } from 'vue'
-const props = defineProps(['name', 'route', 'tags'])
+const props = defineProps(['name', 'route', 'tags', 'href', 'site'])
 const showScreenshot = ref(true)
 const action = computed(() => {
   return props.tags?.includes('game') || props.tags?.includes('game jam') ? 'Play' : 'View'
@@ -21,7 +21,7 @@ function hide() {
         </div>
       </div>
       <div v-if="props.route">
-        <a :href="`https://espoire.github.io/${props.route}/`"> {{ action }} on GitHub Pages </a>
+        <a :href="props.href ?? `https://espoire.github.io/${props.route}/`"> {{ action }} on {{ props.site ?? 'GitHub Pages' }} </a>
       </div>
     </div>
 
@@ -70,7 +70,7 @@ function hide() {
 
 .screenshot {
   float: right;
-  max-width: 30dvw;
+  max-width: 25dvw;
   max-height: min(30dvw, 40dvh);
   margin-left: 1rem;
   margin-bottom: 1rem;
