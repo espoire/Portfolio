@@ -115,6 +115,16 @@ import ProjectCard from './ProjectCard.vue'
     </ul>
   </ProjectCard>
 
+  <ProjectCard name="SVG Magic Circle Generator" route="monster-smash/circle" :tags="['animation', 'published', '2023']" img="magic-circle.svg">
+    <div style="min-height: calc(150px + 0.4rem)">
+      <p>
+        <b>SVG Magic Circle Generator</b> is an animated programmatic art piece, made in vanilla
+        JavaScript. The JavaScript program produces text conforming to the SVG specification,
+        describing a variety of randomly-generated "magic circles".
+      </p>
+    </div>
+  </ProjectCard>
+
   <ProjectCard name="Excel-Diff" route="excel-diff" :tags="['tool', 'published', '2023']">
     <p>
       <b>Excel-Diff</b> is a web-based difference finder for large unsorted Microsoft Excel tables,
@@ -209,7 +219,7 @@ import ProjectCard from './ProjectCard.vue'
       <div class="iframeFrame noninteractive">
         <iframe
           src="https://espoire.github.io/Fish-Tank/"
-          title="Live interactive demo of Zen Fish Tank"
+          title="Live demo of Zen Fish Tank"
           width="500"
           height="501"
           style="scale: 30%; top: calc(50% - 1px)"
@@ -288,5 +298,10 @@ iframe {
   left: 50%;
   padding: 0.1em 0.5em;
   border-radius: 0 0 0.5em 0.5em;
+
+  .noninteractive & {
+    background: none;
+    color: var(--color-text);
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup>
 import { toTitleCase } from '@/script/string.js'
 import { computed, ref } from 'vue'
-const props = defineProps(['name', 'route', 'tags', 'href', 'site'])
+const props = defineProps(['name', 'route', 'tags', 'href', 'site', 'img'])
 const showScreenshot = ref(true)
 const action = computed(() => {
   return props.tags?.includes('Code-Only')
@@ -42,7 +42,7 @@ function hide() {
     <img
       v-if="showScreenshot"
       class="screenshot"
-      :src="`./${props.route}.gif`"
+      :src="props.img ?? `./${props.route}.gif`"
       @error="hide"
       :title="`Screenshot from ${props.name}`"
     />
