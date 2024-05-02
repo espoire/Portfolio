@@ -101,28 +101,80 @@ import ProjectCard from './ProjectCard.vue';
     </ul>
   </ProjectCard>
 
+  <ProjectCard name="Excel-Diff" route="excel-diff" :tags="['tool', 'published', '2023']">
+    <p>
+      <b>Excel-Diff</b> is a web-based difference finder for large unsorted
+      Microsoft Excel tables, built in vanilla JavaScript. While many
+      difference checking tools exist, none I could find at the time
+      could handle matching different versions of the same record in
+      shuffled Microsoft Excel tables. Faced with the need to audit multiple
+      versions of several 50k+ record Excel tables, I built my own tool for the task.
+    </p>
+    <h3>Usage</h3>
+    <p>
+      The tool accepts copy/pastes of two versions of the same Excel table,
+      and returns some formatted text which can be pasted back into Excel for
+      a side-by-side comparison view, suitable for difference highlighting.
+      The tool tolerates altered, added, and deleted records, as well as
+      shuffled order, finding and matching up before and after records side-by-side.
+      It's also performant enough to complete this find-match-sort process in
+      milliseconds, even for datasets of 50,000+ records.
+    </p>
+
+  </ProjectCard>
+
   <ProjectCard name="Starry Sky" route="starry-sky" :tags="['animation', 'published', '2021']">
-    <iframe
-      src="https://espoire.github.io/starry-sky/"
-      title="Live interactive demo of Starry Sky"
-      width="150"
-      height="150"
-    ></iframe>
+    <div class="hasIframe">
+      <div class="iframeFrame">
+        <iframe
+        src="https://espoire.github.io/starry-sky/"
+        title="Live interactive demo of Starry Sky"
+        width="150"
+        height="150"
+        ></iframe>
+      </div>
+        
+      <p>
+        <b>Starry Sky</b> is a programmatic art piece made with Three.js.
+        It features an animated star field, and can display arbitrary 2D
+        images in the stars via star-size modulation.
+      </p>
+  
+      <h3>Interactivity</h3>
+      <p>
+        While it appears flat at first glance, it is actually an example
+        of the forced-perspective technique. The camera can be panned via
+        click-and-drag, or zoomed via the mouse wheel, to get an outside
+        view of the animation.
+      </p>
+    </div>
+  </ProjectCard>
 
-    <p>
-      <b>Starry Sky</b> is a programmatic art piece made with Three.js.
-      It features an animated star field, and can display arbitrary 2D
-      images in the stars via star-size modulation.
-    </p>
+  <ProjectCard name="Zen Fish Tank" route="Fish-Tank" :tags="['animation', 'published', '2021']">
+    <div class="hasIframe">
+      <div class="iframeFrame">
+        <iframe
+        src="https://espoire.github.io/Fish-Tank/"
+        title="Live interactive demo of Zen Fish Tank"
+        width="500"
+        height="500"
+        style="scale: 30%;"
+        ></iframe>
+      </div>
+      
+      <p>
+        <b>Zen Fish Tank</b> is a simple CSS-animated scene of some fish
+        swimming in an ocean-like scene. I built this animation along
+        with a student whom I was teaching the basics of JavaScript, CSS,
+        HTML, and pixel-art.
+      </p>
 
-    <h3>Interactivity</h3>
-    <p>
-      While it appears flat at first glance, it is actually an example
-      of the forced-perspective technique. The camera can be panned via
-      click-and-drag, or zoomed via the mouse wheel, to get an outside
-      view of the animation.
-    </p>
-
+      <h3>Contributors</h3>
+      <ul>
+        <li>Vivian Lampman - Programming</li>
+        <li>Gabrielle Vert - Programming, Pixel Art</li>
+      </ul>
+    </div>
   </ProjectCard>
 </template>
 
@@ -135,13 +187,26 @@ p {
   margin-top: 0.7rem;
 }
 
-iframe {
+.hasIframe {
+  min-height: calc(150px + 0.4rem);
+}
+
+.iframeFrame {
+  position: relative;
   float: right;
-  max-width: 30dvw;
-  max-height: min(30dvw, 40dvh);
   margin-left: 1rem;
   margin-bottom: 1rem;
   border: 0.2rem solid hsla(160, 100%, 37%, 1);
   border-radius: 0.4rem;
+  width: calc(150px + 0.4rem);
+  height: calc(150px + 0.4rem);
+}
+
+iframe {
+  position: absolute;
+  border: none;
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
 }
 </style>
