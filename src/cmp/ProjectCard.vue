@@ -10,6 +10,16 @@ const action = computed(() => {
       ? 'Play'
       : 'View'
 })
+const href = computed(
+  () =>
+    props.href ??
+    (props.tags?.includes('Code-Only')
+      ? `https://github.com/espoire/${props.route}`
+      : `https://espoire.github.io/${props.route}/`)
+)
+const site = computed(
+  () => props.site ?? (props.tags?.includes('Code-Only') ? 'GitHub' : 'GitHub Pages')
+)
 function hide() {
   showScreenshot.value = false
 }
@@ -25,9 +35,7 @@ function hide() {
         </div>
       </div>
       <div v-if="props.route">
-        <a :href="props.href ?? `https://espoire.github.io/${props.route}/`">
-          {{ action }} on {{ props.site ?? 'GitHub Pages' }}
-        </a>
+        <a :href="href"> {{ action }} on {{ site }} </a>
       </div>
     </div>
 

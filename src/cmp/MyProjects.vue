@@ -136,10 +136,8 @@ import ProjectCard from './ProjectCard.vue'
 
   <ProjectCard
     name="Untitled JavaScript machine learning framework"
-    route="machine-learning"
+    route="Machine-Learning"
     :tags="['Code-Only', '2024']"
-    site="GitHub"
-    href="https://github.com/espoire/Machine-Learning"
   >
     <p>
       To prove my grasp of the implementational details of neural networks and stochastic gradient
@@ -231,6 +229,18 @@ import ProjectCard from './ProjectCard.vue'
       </ul>
     </div>
   </ProjectCard>
+
+  <ProjectCard name="DDOP" route="DDOP" :tags="['tool', 'Code-Only', '2020']">
+    <p>
+      <b>DDO</b>, a portmanteau of 'DDO' (Dungeons and Dragons Online) and 'OP' (over-powered) is a
+      gear-recommendation tool for the online MMORPG, Dungeons and Dragons Online. DDOP periodically
+      gathers game data by parsing the player-edited DDO Wiki, and feeds that to a
+      reverse-engineered combat simulator, to produce high-quality recommendations for Monk
+      character's equipment loadouts.
+    </p>
+
+    <p>DDOP is a multithreaded Java application, producing file and console output.</p>
+  </ProjectCard>
 </template>
 
 <style lang="scss" scoped>
@@ -270,7 +280,7 @@ iframe {
   position: relative;
   top: var(--size);
   color: hsla(160, 100%, 37%, 1);
-  background-color: hsla(160, 100%, 37%, 20%);
+  background-color: hsla(160, 100%, 37%, 10%);
   width: fit-content;
   translate: -50%;
   left: 50%;
