@@ -4,7 +4,11 @@ import { computed, ref } from 'vue'
 const props = defineProps(['name', 'route', 'tags', 'href', 'site'])
 const showScreenshot = ref(true)
 const action = computed(() => {
-  return props.tags?.includes('game') || props.tags?.includes('game jam') ? 'Play' : 'View'
+  return props.tags?.includes('Code-Only')
+    ? 'View Source'
+    : props.tags?.includes('game') || props.tags?.includes('game jam')
+      ? 'Play'
+      : 'View'
 })
 function hide() {
   showScreenshot.value = false
@@ -21,7 +25,9 @@ function hide() {
         </div>
       </div>
       <div v-if="props.route">
-        <a :href="props.href ?? `https://espoire.github.io/${props.route}/`"> {{ action }} on {{ props.site ?? 'GitHub Pages' }} </a>
+        <a :href="props.href ?? `https://espoire.github.io/${props.route}/`">
+          {{ action }} on {{ props.site ?? 'GitHub Pages' }}
+        </a>
       </div>
     </div>
 
@@ -62,9 +68,10 @@ function hide() {
   span {
     display: inline-block;
     background-color: var(--color-background-mute);
-    padding: 0.1rem 0.5rem 0.2rem;
+    padding: 0.5rem 0.5rem 0;
     border-radius: 50cqh;
     margin-left: 0.5rem;
+    line-height: 1;
   }
 }
 

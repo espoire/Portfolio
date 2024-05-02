@@ -134,9 +134,25 @@ import ProjectCard from './ProjectCard.vue'
     </p>
   </ProjectCard>
 
+  <ProjectCard
+    name="Untitled JavaScript machine learning framework"
+    route="machine-learning"
+    :tags="['Code-Only', '2024']"
+    site="GitHub"
+    href="https://github.com/espoire/Machine-Learning"
+  >
+    <p>
+      To prove my grasp of the implementational details of neural networks and stochastic gradient
+      descent, in 2022-2024, I built a vanilla-JavaScript neural networks and machine-learning
+      framework from scratch, and tested it with the MNIST optical character recognition task. The
+      framework is platform-agnostic, running in both Node and embedded in a web page, and runs fast
+      enough to even train neural nets on a client machine while embedded in a web page.
+    </p>
+  </ProjectCard>
+
   <ProjectCard name="Auto-Minesweeper" route="Minesweeper" :tags="['game', 'published', '2022']">
-    <div style="min-height: calc(200px + 1.4rem);">
-      <div class="iframeFrame" style="--size: 200px;">
+    <div style="min-height: calc(200px + 1.4rem)">
+      <div class="iframeFrame" style="--size: 200px">
         <iframe
           src="https://espoire.github.io/Minesweeper/"
           title="Live interactive demo of Auto-Minesweeper"
@@ -144,20 +160,18 @@ import ProjectCard from './ProjectCard.vue'
           height="500"
           style="scale: 40%"
         ></iframe>
-        <div class="caption">
-          Interactive
-        </div>
+        <div class="caption">Interactive</div>
       </div>
 
       <p>
         <b>Auto-Minesweeper</b> is a simple web-application version of the famous Minesweeper game
-        bundled with many versions of Windows -- with a twist. The game automatically plays any simple
-        safe moves -- moves deducible in a single step given the visible information. This leaves the
-        player to solve only the more challenging deductions requiring multiple-step inference or
-        probabilistic reasoning.
+        bundled with many versions of Windows -- with a twist. The game automatically plays any
+        simple safe moves -- moves deducible in a single step given the visible information. This
+        leaves the player to solve only the more challenging deductions requiring multiple-step
+        inference or probabilistic reasoning.
       </p>
       <p>Auto-Minesweeper is built in vanilla JavaScript.</p>
-  
+
       <h3>Contributors</h3>
       <ul>
         <li>Vivian Lampman - Programming</li>
@@ -167,7 +181,7 @@ import ProjectCard from './ProjectCard.vue'
   </ProjectCard>
 
   <ProjectCard name="Starry Sky" route="starry-sky" :tags="['animation', 'published', '2021']">
-    <div style="min-height: calc(150px + 1.4rem);">
+    <div style="min-height: calc(150px + 1.4rem)">
       <div class="iframeFrame">
         <iframe
           src="https://espoire.github.io/starry-sky/"
@@ -175,9 +189,7 @@ import ProjectCard from './ProjectCard.vue'
           width="150"
           height="150"
         ></iframe>
-        <div class="caption">
-          Interactive
-        </div>
+        <div class="caption">Interactive</div>
       </div>
 
       <p>
@@ -195,14 +207,14 @@ import ProjectCard from './ProjectCard.vue'
   </ProjectCard>
 
   <ProjectCard name="Zen Fish Tank" route="Fish-Tank" :tags="['animation', 'published', '2021']">
-    <div style="min-height: calc(150px + 0.4rem);">
+    <div style="min-height: calc(150px + 0.4rem)">
       <div class="iframeFrame noninteractive">
         <iframe
           src="https://espoire.github.io/Fish-Tank/"
           title="Live interactive demo of Zen Fish Tank"
           width="500"
           height="501"
-          style="scale: 30%; top: calc(50% - 1px);"
+          style="scale: 30%; top: calc(50% - 1px)"
         ></iframe>
       </div>
 
