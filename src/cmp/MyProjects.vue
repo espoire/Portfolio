@@ -36,6 +36,41 @@ import ProjectCard from './ProjectCard.vue';
     </p>
   </ProjectCard>
 
+  <ProjectCard name="Monster Smash" route="monster-smash" :tags="['game', 'published', '2023']">
+    <p>
+      <b>Monster Smash</b> is a roguelike deck-building monster-battler game, built with vanilla JavaScript and HTML5.
+      The game was built during late 2023, and at the time of writing development is no longer in progress.
+      Monster Smash involves training a monster to battle other monsters, and hopefully become strong enough
+      to defeat the end boss before time runs out.
+    </p>
+
+    <h3>Gameplay</h3>
+    <p>
+      Players alternate drawing and playing hands of Training cards, and then either visiting a shop or
+      participating in monster battles. After the Shop or Battle, the player may gain a choice of new cards
+      to add to their deck. Then, the player pre-selects their next event, the deck shuffles, and the cycle
+      repeats.
+    </p>
+    <p>
+      Cards have a wide variety of effects, including directly modifying a monster's stats, boosting future
+      cards, permanently adding or removing cards from the deck, and granting temporary buffs or debuffs.
+      Some cards can only be played when certain special conditions are met, or if a cost can be paid. Because
+      the player preselects their upcoming battles and shop visits, the player can use cards differently based
+      on their foreknowledge, for example, prioritizing healing before a tough battle.
+    </p>
+
+    <h3>Time Limit</h3>
+    <p>
+      During each game, players may only shuffle their deck 20 times. At the end of the final shuffle, the player
+      must face a powerful dragon as a final test.
+    </p>
+
+    <h3>Other Contributors</h3>
+    <p>
+      Shawna Burns - 2D Images, Sound Effects
+    </p>
+  </ProjectCard>
+
   <ProjectCard name="Starry Sky" route="starry-sky" :tags="['animation', 'published', '2021']">
     <iframe
       src="https://espoire.github.io/starry-sky/"

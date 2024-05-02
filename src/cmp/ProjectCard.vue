@@ -1,8 +1,11 @@
 <script setup>
-import { capitalize } from '@/script/string.js'
-import { ref } from 'vue'
+import { toTitleCase } from '@/script/string.js'
+import { computed, ref } from 'vue'
 const props = defineProps(['name', 'route', 'tags'])
 const showScreenshot = ref(true)
+const action = computed(() => {
+  return props.tags?.includes('game') || props.tags?.includes('game jam') ? 'Play' : 'View'
+})
 function hide() {
   showScreenshot.value = false
 }
@@ -14,17 +17,21 @@ function hide() {
       <div>
         <h2 class="name">{{ props.name }}</h2>
         <div class="tags">
-          <span v-for="(tag, i) of props.tags" :key="i">{{ capitalize(tag) }}</span>
+          <span v-for="(tag, i) of props.tags" :key="i">{{ toTitleCase(tag) }}</span>
         </div>
       </div>
       <div v-if="props.route">
-        <a :href="`https://espoire.github.io/${props.route}/`"
-          >{{ props.tags?.includes('game') ? 'Play' : 'View' }} on GitHub Pages</a
-        >
+        <a :href="`https://espoire.github.io/${props.route}/`"> {{ action }} on GitHub Pages </a>
       </div>
     </div>
 
-    <img v-if="showScreenshot" class="screenshot" :src="`./${props.route}.gif`" @error="hide" :title="`Screenshot from ${props.name}`" />
+    <img
+      v-if="showScreenshot"
+      class="screenshot"
+      :src="`./${props.route}.gif`"
+      @error="hide"
+      :title="`Screenshot from ${props.name}`"
+    />
     <p class="description"><slot></slot></p>
   </div>
 </template>
