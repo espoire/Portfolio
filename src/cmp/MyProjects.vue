@@ -145,13 +145,13 @@ import ProjectCard from './ProjectCard.vue'
   </ProjectCard>
 
   <ProjectCard
-    name="Untitled JavaScript machine learning framework"
+    name="JavaScript machine learning"
     route="Machine-Learning"
     :tags="['Code-Only', '2022-2024']"
   >
     <p>
       To prove my grasp of the implementational details of neural networks and stochastic gradient
-      descent, in 2022-2024, I built a vanilla-JavaScript neural networks and machine-learning
+      descent, in 2022-2024, I built an untitled vanilla-JavaScript neural networks and machine-learning
       framework from scratch, and tested it with the MNIST optical character recognition task. The
       framework is platform-agnostic, running in both Node and embedded in a web page, and runs fast
       enough to even train neural nets on a client machine while embedded in a web page.

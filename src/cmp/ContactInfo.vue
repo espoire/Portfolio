@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Developer Portfolio</h1>
+    <h1>Developer<br />Portfolio</h1>
 
     <div>
       <b class="name"> Vivian Lampman </b> <br />
@@ -30,7 +30,12 @@
 <style lang="scss" scoped>
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  line-height: 1.2;
 }
 
 .circle {

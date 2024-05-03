@@ -26,7 +26,12 @@ import MyProjects from './cmp/MyProjects.vue';
 
   .main {
     max-width: 1280px;
-    padding: 1rem
+    padding: 1rem;
+
+    @media (max-width: 57rem) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .footer {

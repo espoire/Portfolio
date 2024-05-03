@@ -28,7 +28,7 @@ function hide() {
 <template>
   <div class="card" :style="showScreenshot ? `min-height: calc(min(30dvw, 40dvh${props.size ? `, ${props.size}px` : ''}) + 8rem);` : ''">
     <div class="header">
-      <div>
+      <div class="nameAndTagsWrap">
         <h2 class="name">{{ props.name }}</h2>
         <div class="tags">
           <span v-for="(tag, i) of props.tags" :key="i">{{ toTitleCase(tag) }}</span>
@@ -57,15 +57,23 @@ function hide() {
   padding: 2rem;
   border-radius: 2rem;
   margin-top: 2rem;
+
+  @media (max-width: 26rem) {
+    padding: 1rem;
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+}
 
-  div {
-    display: flex;
-    justify-content: space-between;
+.nameAndTagsWrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 70rem) {
+    flex-direction: column;
   }
 }
 
@@ -78,7 +86,7 @@ function hide() {
   span {
     display: inline-block;
     background-color: var(--color-background-mute);
-    padding: 0.5rem 0.5rem 0;
+    padding: 0.5rem;
     border-radius: 50cqh;
     margin-left: 0.5rem;
     line-height: 1;
