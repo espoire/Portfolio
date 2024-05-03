@@ -292,7 +292,7 @@ iframe {
   position: relative;
   top: var(--size);
   color: hsla(160, 100%, 37%, 1);
-  background-color: hsla(160, 100%, 37%, 10%);
+  background-color: hsla(160, 100%, 37%, 0.05);
   width: fit-content;
   translate: -50%;
   left: 50%;
