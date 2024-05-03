@@ -72,7 +72,7 @@ import ProjectCard from './ProjectCard.vue'
         JaggedRidge - Programming: Specific Mobs Movement, Opponent Script Specifics, Rune Drawing,
         Round Advancement
       </li>
-      <li>Leo115 - Programming: 3D Modeling, Project Management</li>
+      <li>Leo115 - 3D Modeling, Project Management</li>
       <li>Shawna Burns - 2D Art, Sound Effects, Story Design</li>
     </ul>
   </ProjectCard>
