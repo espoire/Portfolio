@@ -147,7 +147,7 @@ import ProjectCard from './ProjectCard.vue'
   <ProjectCard
     name="Untitled JavaScript machine learning framework"
     route="Machine-Learning"
-    :tags="['Code-Only', '2024']"
+    :tags="['Code-Only', '2022-2024']"
   >
     <p>
       To prove my grasp of the implementational details of neural networks and stochastic gradient
@@ -268,8 +268,8 @@ p {
   --size: 150px;
   position: relative;
   float: right;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
   border: 0.2rem solid hsla(160, 100%, 37%, 1);
   border-radius: 0.4rem;
   width: calc(var(--size) + 0.4rem);

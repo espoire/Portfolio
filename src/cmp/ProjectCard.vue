@@ -26,7 +26,7 @@ function hide() {
 </script>
 
 <template>
-  <div class="card" :style="showScreenshot ? `min-height: calc(min(30dvw, 40dvh${props.size ? `, ${props.size}px` : ''}) + 5rem);` : ''">
+  <div class="card" :style="showScreenshot ? `min-height: calc(min(30dvw, 40dvh${props.size ? `, ${props.size}px` : ''}) + 8rem);` : ''">
     <div class="header">
       <div>
         <h2 class="name">{{ props.name }}</h2>
@@ -54,7 +54,7 @@ function hide() {
 <style lang="scss" scoped>
 .card {
   background-color: var(--color-background-soft);
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 2rem;
   margin-top: 2rem;
 }
@@ -71,6 +71,7 @@ function hide() {
 
 .name {
   line-height: 1;
+  margin-right: 1rem;
 }
 
 .tags {
@@ -88,15 +89,15 @@ function hide() {
   float: right;
   max-width: 25dvw;
   max-height: min(30dvw, 40dvh);
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   border: 0.2rem solid var(--color-border);
   border-radius: 0.4rem;
 }
 
 .description {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: justify;
 }
 </style>
