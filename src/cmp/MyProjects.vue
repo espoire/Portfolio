@@ -4,6 +4,38 @@ import ProjectCard from './ProjectCard.vue'
 
 <template>
   <ProjectCard
+    name="High Seas"
+    route="high-seas"
+    :tags="['animation', 'published', '2024']"
+  >
+    <div style="min-height: calc(150px + 0.4rem)">
+      <div class="iframeFrame noninteractive">
+        <iframe
+          src="https://espoire.github.io/high-seas/"
+          title="Live demo of High Seas"
+          width="188"
+          height="188"
+          style="scale: 80%;"
+        ></iframe>
+      </div>
+      <p>
+        <b>High Seas</b> is, as the splash page will tell you, a programmatic art piece made with
+        Vite and React. I built this animation in summer 2024 to brush up on my React skills for
+        a potential employment opportunity, since it had been a while since my work last used React.
+        While simple and minimalist in style, I think it achieved an austere beauty. Relax and enjoy this
+        soothing scene of a sailboat on its long lonely voyage.
+      </p>
+      <h3>Ocean Weather</h3>
+      <p>
+        Over time, a few aspects of the scene will vary. The sky color cycles over 90 seconds
+        to simulate an accelerated day/night cycle. Eventually, a bank of fog will roll in, and
+        later, disperse. Every now and then the wind speed will shift, illustrated with small
+        "wind" particles and whipping up waves.
+      </p>
+    </div>
+  </ProjectCard>
+
+  <ProjectCard
     name="Pew-Pew Switcheroo"
     route="pew-pew-switcheroo"
     :tags="['game', 'published', '2024']"
